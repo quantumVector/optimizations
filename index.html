@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Сайт</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navigation">
+        <a href="index.html" class="active">Главная</a>
+        <a href="about.html">О проекте</a>
+    </nav>
+
+    <h1>Привет, TypeScript! 👋</h1>
+
+    <div class="counter">
+        <p>Счётчик: <span id="count">0</span></p>
+        <button id="increment">+1</button>
+        <button id="decrement">-1</button>
+        <button id="reset">Сброс</button>
+    </div>
+    <div class="greeting">
+        <input type="text" id="nameInput" placeholder="Введи своё имя">
+        <button id="greetBtn">Поздороваться</button>
+        <p id="greetingText"></p>
+    </div>
+</div>
+<script type="module" src="./dist/main.js"></script>
+</body>
+</html>

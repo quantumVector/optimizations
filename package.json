@@ -1,0 +1,28 @@
+{
+  "name": "optimizations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "browser-sync start --server --files '**/*.html, **/*.css, dist/**/*.js' --no-notify --no-open",
+    "dev": "concurrently \"npm run watch\" \"npm run serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantumVector/optimizations.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quantumVector/optimizations/issues"
+  },
+  "homepage": "https://github.com/quantumVector/optimizations#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.3"
+  }
+}
