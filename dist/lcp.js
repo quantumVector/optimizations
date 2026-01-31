@@ -18,7 +18,7 @@ function initApp() {
         else {
             clearInterval(interval);
         }
-    }, 3000);
+    }, 1000);
 }
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initApp);
