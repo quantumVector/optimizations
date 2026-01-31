@@ -18,7 +18,7 @@ function initApp(): void {
         } else {
             clearInterval(interval);
         }
-    }, 1000);
+    }, 300);
 }
 
 if (document.readyState === 'loading') {
