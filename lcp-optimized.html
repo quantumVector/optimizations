@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCP</title>
+
+    <!-- Critical CSS inline -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        #elem-2 picture {
+            display: block;
+            width: 100%;
+        }
+
+        #elem-2 img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <link rel="preload" href="./styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./styles/lcp.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/lcp.css">
+    </noscript>
+    <link rel="preload" as="image" href="./dist/assets/owl-optimized.webp" type="image/webp">
+</head>
+<body>
+<div class="optimized">
+    <div id="elem-1">
+        <nav class="navigation">
+            <a href="index.html">Главная</a>
+            <a href="lcp.html">LCP</a>
+            <a href="lcp-optimized.html" class="active">LCP Optimized</a>
+        </nav>
+    </div>
+
+    <div id="elem-2">
+        <picture>
+            <source
+                    type="image/webp"
+                    srcset="
+                        ./dist/assets/owl-320w.webp 320w,
+                        ./dist/assets/owl-640w.webp 640w,
+                        ./dist/assets/owl-1024w.webp 1024w,
+                        ./dist/assets/owl-1920w.webp 1920w
+                    "
+                    sizes="(max-width: 768px) 100vw, 50vw"
+            >
+            <source
+                    type="image/jpeg"
+                    srcset="
+                        ./dist/assets/owl-320w.jpg 320w,
+                        ./dist/assets/owl-640w.jpg 640w,
+                        ./dist/assets/owl-1024w.jpg 1024w,
+                        ./dist/assets/owl-1920w.jpg 1920w
+                    "
+                    sizes="(max-width: 768px) 100vw, 50vw"
+            >
+            <img
+                    src="./dist/assets/owl-optimized.webp"
+                    loading="eager"
+                    fetchpriority="high"
+            >
+        </picture>
+    </div>
+
+    <div id="elem-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, obcaecati.</p>
+    </div>
+
+    <div id="elem-4">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquam blanditiis consequuntur dolor facilis laboriosam
+            libero nesciunt numquam odio officia reiciendis!
+        </p>
+    </div>
+
+</div>
+<!--<script type="module" src="./dist/lcp.js"></script>-->
+</body>
+</html>

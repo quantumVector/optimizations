@@ -1,0 +1,22 @@
+#elem-1 {
+    display: none;
+}
+
+#elem-2 {
+    display: none;
+}
+
+#elem-3 {
+    display: none;
+}
+
+#elem-4 {
+    display: none;
+}
+
+.optimized #elem-1,
+.optimized #elem-2,
+.optimized #elem-3,
+.optimized #elem-4 {
+    display: block;
+}
