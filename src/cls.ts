@@ -3,10 +3,8 @@ function initApp(): void {
 
     setTimeout(() => {
         if (element) {
-            // Создаём новое изображение в памяти
             const newImg = new Image();
             newImg.onload = () => {
-                // Когда загрузилось - меняем src
                 element.src = './dist/assets/test2.jpg';
             };
             newImg.src = './dist/assets/test2.jpg';
@@ -14,6 +12,28 @@ function initApp(): void {
     }, 1500);
 }
 
+function loadGoogleFont(): void {
+    setTimeout(() => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://fonts.googleapis.com/css2?family=Asset&display=swap';
+
+        link.onload = () => {
+            document.body.classList.add('fonts-loaded');
+            console.log('✅ Google Font загружен');
+        };
+
+        document.head.appendChild(link);
+        console.log('⏳ Начата загрузка Google Font через 3 секунды');
+    }, 1500); // Задержка 3 секунды
+}
+
+// Запуск
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadGoogleFont);
+} else {
+    loadGoogleFont();
+}
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initApp);
