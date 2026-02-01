@@ -3,7 +3,6 @@ body {
     transition: font-family 0.3s ease;
 }
 
-/* Класс который добавится после загрузки */
 body.fonts-loaded {
     font-family: "Asset", serif;
 }

@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LCP</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/cls.css">
+    <link rel="stylesheet" href="./styles/cls-optimized.css">
+
+    <link
+            rel="preload"
+            href="./dist/fonts/Asset-Regular.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+    >
 </head>
-<body>
+<body class="fonts-loaded">
 <div>
     <div id="elem-1">
         <nav class="navigation">
             <a href="index.html">Главная</a>
             <a href="lcp.html">LCP</a>
             <a href="lcp-optimized.html">LCP Optimized</a>
-            <a href="cls.html" class="active">CLS</a>
+            <a href="cls.html">CLS</a>
+            <a href="cls-optimized.html" class="active">CLS Optimized</a>
         </nav>
     </div>
 
-    <div>
+    <div class="text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Dolorem dolorum eaque esse fuga fugit in laboriosam placeat
         quisquam repellat tempore!
@@ -50,6 +59,6 @@
     </div>
 
 </div>
-<script type="module" src="./dist/cls.js"></script>
+<!--<script type="module" src="./dist/cls.js"></script>-->
 </body>
 </html>
