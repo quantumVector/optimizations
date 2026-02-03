@@ -20,6 +20,7 @@ async function blockMainThreadNonBlocking(totalMs: number): Promise<void> {
 
 // Использование
 console.log('⏳ Начинаем работу без блокировки...');
+//@ts-ignore
 const startTime = Date.now();
 
 blockMainThreadNonBlocking(2000).then(() => {
