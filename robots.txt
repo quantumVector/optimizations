@@ -1,0 +1,47 @@
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию служебных файлов и папок
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /dist/*.js
+Disallow: /dist/*.map
+Disallow: /*.json
+Disallow: /*.log
+
+# Разрешаем индексацию статических ресурсов
+Allow: /dist/assets/
+Allow: /dist/fonts/
+Allow: /styles/
+
+# Указываем Sitemap
+Sitemap: https://quantumvector.github.io/optimizations/sitemap.xml
+
+# Правила для конкретных ботов
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /dist/assets/
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Запрещаем плохих ботов
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Задержка между запросами (в секундах)
+Crawl-delay: 1
+
+# Meta правила для индексации
+# Host: quantumvector.github.io
