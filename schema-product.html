@@ -58,13 +58,36 @@
             }]
         }
     </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://quantumvector.github.io/optimizations/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Примеры Article Scheme",
+                "item": "https://quantumvector.github.io/optimizations/schema-article.html"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Примеры Product Scheme",
+                "item": "https://quantumvector.github.io/optimizations/schema-product.html"
+            }]
+        }
+    </script>
 </head>
 <body>
 <div class="container">
-    <nav class="navigation">
+    <nav class="navigation" aria-label="Breadcrumb">
         <a href="index.html">Главная</a>
         <a href="schema-article.html">Schema Article</a>
-        <a href="schema-product.html" class="active">Schema Product</a>
+        <a href="schema-product.html" class="active" aria-current="page">Schema Product</a>
     </nav>
 
     <h1>Product</h1>
