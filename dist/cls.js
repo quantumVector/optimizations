@@ -22,9 +22,9 @@ function loadGoogleFont() {
         };
         document.head.appendChild(link);
         console.log('⏳ Начата загрузка Google Font через 3 секунды');
-    }, 1500); // Задержка 3 секунды
+    }, 1500);
 }
-// Запуск
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadGoogleFont);
 }
