@@ -1,6 +1,7 @@
 "use strict";
 // Симуляция тяжёлых вычислений
 console.log('⏳ Начинаем блокировать рендеринг...');
+//@ts-ignore
 const startTime = Date.now();
 // Блокируем главный поток на 2 секунды
 function blockMainThread(ms) {

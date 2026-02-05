@@ -16,6 +16,7 @@ async function blockMainThreadNonBlocking(totalMs) {
 }
 // Использование
 console.log('⏳ Начинаем работу без блокировки...');
+//@ts-ignore
 const startTime = Date.now();
 blockMainThreadNonBlocking(2000).then(() => {
     console.log(`✅ Завершили через ${Date.now() - startTime}ms`);
